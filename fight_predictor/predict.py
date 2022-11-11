@@ -144,7 +144,7 @@ class Predict:
         final_winners_predicted = []
         for i, (pair1, pair2) in enumerate(zip(self.fighter_pairs, self.reversed_pairs)):
             # if it selects the same fighter each time that fighter is the predicted winner
-            if winner_preds[i][0] is 'fighter1' and reversed_winner_preds[i][0] is 'fighter2':
+            if winner_preds[i][0] == 'fighter1' and reversed_winner_preds[i][0] == 'fighter2':
                 avg_prob = np.mean(
                     [winner_preds[i][1], reversed_winner_preds[i][1]])
                 final_winners_predicted.append((pair1[0], avg_prob))
