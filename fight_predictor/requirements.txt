@@ -9,5 +9,4 @@ tensorflow
 Flask_Cors
 joblib
 scikit-learn
-pycaret
 gunicorn
