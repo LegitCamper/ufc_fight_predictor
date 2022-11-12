@@ -49,5 +49,5 @@ def index():
     # code to fetch fighter list
 
 if __name__ == "__main__":
-    app.run(threaded=False, port=5000)
+    app.run(threaded=True, port=5000)
     # app.run(debug=True, host='0.0.0.0', port=5000)

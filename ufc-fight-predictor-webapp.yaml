@@ -1,0 +1,35 @@
+name: ufc-fight-predictor-webapp
+region: nyc
+services:
+- build_command: yarn build
+  environment_slug: node-js
+  github:
+    branch: master
+    deploy_on_push: true
+    repo: LegitCamper/ufc_fight_predictor
+  http_port: 443
+  instance_count: 1
+  instance_size_slug: basic-xs
+  name: front-end
+  routes:
+  - path: /
+  run_command: |-
+    npm install -g serve
+    serve -s build -l 443
+  source_dir: front_end
+- build_command: |-
+    pip install -r requirements.txt
+    #sudo apt install tensorflow
+  environment_slug: python
+  github:
+    branch: master
+    deploy_on_push: true
+    repo: LegitCamper/ufc_fight_predictor
+  http_port: 5000
+  instance_count: 1
+  instance_size_slug: basic-xs
+  name: fight-predictor
+  routes:
+  - path: /ufc-fight-predictor-fight-predic
+  run_command: 'gunicorn server:app #python3 server.py'
+  source_dir: fight_predictor

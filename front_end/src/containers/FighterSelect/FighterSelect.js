@@ -15,8 +15,8 @@ function reducer(state, { field, value }) {
 
 const PredictionGrid = () => {
 
-    const fighters_url = "https://fight-predictor-api.herokuapp.com/api/v1.0/fighters"
-    const predict_url = "https://fight-predictor-api.herokuapp.com/api/v1.0/predict"
+    const fighters_url = "https://ufc-fight-predictor-webapp-8q8bz.ondigitalocean.app/api/api/v1.0/fighters"
+    const predict_url = "https://ufc-fight-predictor-webapp-8q8bz.ondigitalocean.app/api/api/v1.0/predict"
     const [fighterNames, setFighterNames] = useState([])
     const [selectedFighters, dispatch] = useReducer(reducer, initialState)
     const [winner, setWinner] = useState("")
