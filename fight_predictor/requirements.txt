@@ -8,6 +8,6 @@ Scrapy
 tensorflow
 Flask_Cors
 joblib
-scikit_learn
+scikit-learn
 pycaret
 gunicorn
