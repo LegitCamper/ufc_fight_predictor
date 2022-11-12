@@ -8,5 +8,5 @@ Scrapy
 tensorflow
 Flask_Cors
 joblib
-scikit-learn==0.23.2
+scikit-learn
 gunicorn
